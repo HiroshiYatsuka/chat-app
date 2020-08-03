@@ -216,3 +216,408 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 7452)
 
 
+Started GET "/" for ::1 at 2020-08-03 17:09:46 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered messages/_main_chat.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered messages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 10619)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:10:05 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:10:52 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9121)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:15:45 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered messages/_main_chat.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered messages/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 764)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 7490)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:20:16 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 9977)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:41:17 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered messages/_main_chat.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered messages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 11089)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:41:18 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5965)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:41:19 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 5932)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:42:21 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 9565)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:43:26 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 9932)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:45:20 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:55:53 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 9128)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:56:07 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 9556)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:56:19 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 9518)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:56:31 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 9540)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:56:47 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 6001)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:58:37 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 9573)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:58:54 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 9970)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:59:13 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6422)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:59:39 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 9947)
+
+
+Started GET "/" for ::1 at 2020-08-03 17:59:59 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 9932)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:01:33 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 9516)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:01:34 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5956)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:16:24 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 10816)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:16:33 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 6004)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:31 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered messages/_main_chat.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered messages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 7478)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:32 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5933)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:33 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5950)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:33 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5940)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:33 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5930)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:34 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5944)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:34 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5940)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:34 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5932)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:34 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5950)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:19:34 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 5942)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:20:01 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 10374)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:20:31 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9947)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:20:53 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 5992)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:27:05 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered messages/_main_chat.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered messages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8242)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:38:36 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_side_bar.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered messages/_main_chat.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered messages/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 11188)
+
+
