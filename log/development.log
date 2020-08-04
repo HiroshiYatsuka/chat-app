@@ -1365,3 +1365,76 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10752)
 
 
+Started POST "/users/sign_in" for ::1 at 2020-08-04 11:46:22 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3FXXF4JUvpxefTI9uCdBHq30QpRveKkOY2Yee6eakO5JREF1z0ZRLe0xu9n7ms7XiXQfZzt4aELAdAux5jMIqA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 632)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"3FXXF4JUvpxefTI9uCdBHq30QpRveKkOY2Yee6eakO5JREF1z0ZRLe0xu9n7ms7XiXQfZzt4aELAdAux5jMIqA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hiroshi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 2.1ms | Allocations: 14497)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-04 11:46:23 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"SWrSJT2WE6ZV7/YejVDr4GbjBGXFrgWRabGW3i6QxWLce0RHcIT8F+ajf/rO7WQpQmNZlpGuxN3Ko4MUbzldJA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 445)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"SWrSJT2WE6ZV7/YejVDr4GbjBGXFrgWRabGW3i6QxWLce0RHcIT8F+ajf/rO7WQpQmNZlpGuxN3Ko4MUbzldJA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hiroshi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 141)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8424)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-04 11:46:25 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"zlhj40+RlyUe+xA6pwyiXEHqU/DgZroPnqR0eGWAj4NbSfWBAoN4lK23md7ksS2VZWoOA7Rme0M9tmGyJCkXxQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"zlhj40+RlyUe+xA6pwyiXEHqU/DgZroPnqR0eGWAj4NbSfWBAoN4lK23md7ksS2VZWoOA7Rme0M9tmGyJCkXxQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hiroshi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 141)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 8409)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-08-04 11:46:36 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___448898493136817978_70352640104920 at /Users/hiroshi/projects/chat-app/app/views/devise/registrations/new.html.erb:9)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1660)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 10056)
+
+
+Started POST "/users" for ::1 at 2020-08-04 11:46:38 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"iok8yhaRApBYJUzbLwaUmpTgRSwP8BAEzblrSSW8ktZfhStPz2ScVU4EwXCo84IijLNMIUMxadxCHuuT5TydXg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___448898493136817978_70352640104920 at /Users/hiroshi/projects/chat-app/app/views/devise/registrations/new.html.erb:9)
+  Rendered /Users/hiroshi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.2/app/views/devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 675)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 13572)
+
+
