@@ -1452,3 +1452,36 @@ Migrating to CreateRooms (20200805020416)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8617640504667222525')[0m
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/rooms/new" for ::1 at 2020-08-05 11:56:03 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RoomsController#new as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 1143)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-05 11:56:03 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hiroshi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 639)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1039ms (Views: 1019.5ms | ActiveRecord: 5.1ms | Allocations: 1421049)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-05 11:56:34 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ccwWAhSt3vP+kkYc1qGz4pd1EHHnP56eOELuRtGBP6EV3xlFfvX/8tOOulY/nJsVs5hmsOVQO2MUx2i+qGxoUg==", "user"=>{"email"=>"hrs0305@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hrs0305@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/rooms/new
+Completed 302 Found in 233ms (ActiveRecord: 2.5ms | Allocations: 5310)
+
+
+Started GET "/rooms/new" for ::1 at 2020-08-05 11:56:45 +0900
+Processing by RoomsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering rooms/new.html.erb within layouts/application
+  Rendered rooms/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 11.1ms | ActiveRecord: 6.0ms | Allocations: 15413)
+
+
