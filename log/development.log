@@ -1786,3 +1786,15 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.7ms | Allocations: 11885)
 
 
+Started GET "/" for ::1 at 2020-08-05 15:53:48 +0900
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` INNER JOIN `room_users` ON `rooms`.`id` = `room_users`.`room_id` WHERE `room_users`.`user_id` = 1[0m
+  ↳ app/views/messages/_side_bar.html.erb:13
+  Rendered messages/_side_bar.html.erb (Duration: 10.7ms | Allocations: 8611)
+  Rendered rooms/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 8932)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 16.9ms | ActiveRecord: 4.9ms | Allocations: 27205)
+
+
