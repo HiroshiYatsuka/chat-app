@@ -3016,3 +3016,451 @@ Processing by RoomsController#index as HTML
 Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 11760)
 
 
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8617640504667222525', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActiveStorageTables (20200805091702)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key`  (`key`))[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime NOT NULL,  INDEX `index_active_storage_attachments_on_blob_id`  (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness`  (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200805091702')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8617640504667222525')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/rooms/new" for ::1 at 2020-08-05 18:25:02 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RoomsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering rooms/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` != 1[0m
+  ↳ app/views/rooms/new.html.erb:21
+  Rendered rooms/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1027ms (Views: 979.3ms | ActiveRecord: 4.0ms | Allocations: 1418420)
+
+
+Started POST "/rooms" for ::1 at 2020-08-05 18:25:13 +0900
+Processing by RoomsController#create as HTML
+  Parameters: {"authenticity_token"=>"pxhEx6wQVy5MTnVjD8OliI6lyNeM2Uc/nmQNYqc1JR85KodNZl1EMxiShhirSFifbOnhxmpovJ6ARMiLun23ag==", "room"=>{"name"=>"NEW ROOM", "user.ids"=>["2"], "user_ids"=>["1"]}, "commit"=>"Create Room"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :user.ids[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/controllers/rooms_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rooms_controller.rb:12:in `create'
+  [1m[36mRoom Create (0.2ms)[0m  [1m[32mINSERT INTO `rooms` (`name`, `created_at`, `updated_at`) VALUES ('NEW ROOM', '2020-08-05 09:25:13.726916', '2020-08-05 09:25:13.726916')[0m
+  ↳ app/controllers/rooms_controller.rb:12:in `create'
+  [1m[36mRoomUser Create (0.2ms)[0m  [1m[32mINSERT INTO `room_users` (`room_id`, `user_id`, `created_at`, `updated_at`) VALUES (4, 1, '2020-08-05 09:25:13.729240', '2020-08-05 09:25:13.729240')[0m
+  ↳ app/controllers/rooms_controller.rb:12:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rooms_controller.rb:12:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 3.0ms | Allocations: 16576)
+
+
+Started GET "/" for ::1 at 2020-08-05 18:25:13 +0900
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` INNER JOIN `room_users` ON `rooms`.`id` = `room_users`.`room_id` WHERE `room_users`.`user_id` = 1[0m
+  ↳ app/views/messages/_side_bar.html.erb:13
+  Rendered messages/_side_bar.html.erb (Duration: 3.2ms | Allocations: 2894)
+  Rendered rooms/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 13868)
+
+
+Started GET "/rooms/4/messages" for ::1 at 2020-08-05 18:25:28 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"room_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` WHERE `rooms`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` INNER JOIN `room_users` ON `rooms`.`id` = `room_users`.`room_id` WHERE `room_users`.`user_id` = 1[0m
+  ↳ app/views/messages/_side_bar.html.erb:13
+  Rendered messages/_side_bar.html.erb (Duration: 1.8ms | Allocations: 1139)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`room_id` = 4[0m
+  ↳ app/views/messages/_main_chat.html.erb:15
+  Rendered collection of messages/_message.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered messages/_main_chat.html.erb (Duration: 3.4ms | Allocations: 2239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 13.7ms | ActiveRecord: 5.7ms | Allocations: 21859)
+
+
+Started POST "/rooms/4/messages" for ::1 at 2020-08-05 18:26:15 +0900
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"17UcwJHghTrkR2PUjPYZGnmy6UEn+EFGq+RlPsQyRYiPyuLpC3voPMnQvN68L9zhu74vwMcBednC3KX16glcgg==", "message"=>{"content"=>"testtest", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f915768a390 @tempfile=#<Tempfile:/var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/RackMultipart20200805-10334-pknj6j.png>, @original_filename="apple-touch-icon-precomposed.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"message[image]\"; filename=\"apple-touch-icon-precomposed.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"送信", "room_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` WHERE `rooms`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `room_id`, `user_id`, `created_at`, `updated_at`) VALUES ('testtest', 4, 1, '2020-08-05 09:26:16.080192', '2020-08-05 09:26:16.080192')[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 8 AND `active_storage_attachments`.`record_type` = 'Message' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('euhb9zhmfdjyy5k0h7icfrw0w62h', 'apple-touch-icon-precomposed.png', 'image/png', '{\"identified\":true}', 0, '1B2M2Y8AsgTpgAmY7PhCfg==', '2020-08-05 09:26:16')[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'Message', 8, 1, '2020-08-05 09:26:16')[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mMessage Update (4.3ms)[0m  [1m[33mUPDATE `messages` SET `messages`.`updated_at` = '2020-08-05 09:26:16.089042' WHERE `messages`.`id` = 8[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: euhb9zhmfdjyy5k0h7icfrw0w62h (checksum: 1B2M2Y8AsgTpgAmY7PhCfg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: af77b83b-386a-49cd-951e-036909509a0a) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f91588d4e38 @uri=#<URI::GID gid://chat-app/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/rooms/4/messages
+Completed 302 Found in 142ms (ActiveRecord: 14.1ms | Allocations: 75138)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a] Performing ActiveStorage::AnalyzeJob (Job ID: af77b83b-386a-49cd-951e-036909509a0a) from Async(active_storage_analysis) enqueued at 2020-08-05T09:26:16Z with arguments: #<GlobalID:0x00007f914e68a740 @uri=#<URI::GID gid://chat-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: euhb9zhmfdjyy5k0h7icfrw0w62h[0m
+Started GET "/rooms/4/messages" for ::1 at 2020-08-05 18:26:16 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by MessagesController#index as HTML
+  Parameters: {"room_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` WHERE `rooms`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` INNER JOIN `room_users` ON `rooms`.`id` = `room_users`.`room_id` WHERE `room_users`.`user_id` = 1[0m
+  ↳ app/views/messages/_side_bar.html.erb:13
+  Rendered messages/_side_bar.html.erb (Duration: 2.4ms | Allocations: 1133)
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`room_id` = 4[0m
+  ↳ app/views/messages/_main_chat.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/messages/_main_chat.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 8 AND `active_storage_attachments`.`record_type` = 'Message' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:17
+  Rendered collection of messages/_message.html.erb [1 times] (Duration: 9.3ms | Allocations: 3642)
+  Rendered messages/_main_chat.html.erb (Duration: 15.3ms | Allocations: 6284)
+  Rendered messages/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 7554)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 28.2ms | ActiveRecord: 2.0ms | Allocations: 18917)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--09b996767ed5b8e45475f1b014dc707f656eab7f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--544042af76843b67cbc99fdb2b7af062bf3b0e75/apple-touch-icon-precomposed.png" for ::1 at 2020-08-05 18:26:16 +0900
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--09b996767ed5b8e45475f1b014dc707f656eab7f", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--544042af76843b67cbc99fdb2b7af062bf3b0e75", "filename"=>"apple-touch-icon-precomposed"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/euhb9zhmfdjyy5k0h7icfrw0w62h/632ac84651c144d24a1cd794b5077a0fe34259f1bc2131058e06685417e9540f (no)[0m
+[36m  Disk Storage (34.4ms) [0m[34mDownloaded file from key: euhb9zhmfdjyy5k0h7icfrw0w62h[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a] Skipping image analysis because ImageMagick doesn't support the file
+Completed 500 Internal Server Error in 2198ms (ActiveRecord: 0.4ms | Allocations: 4813)
+
+
+  
+MiniMagick::Error (`magick convert /var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/ActiveStorage-1-20200805-10334-10n0rrc.png[0] -auto-orient -resize 500x500 /var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/image_processing20200805-10334-15i5y91.png` failed with error:
+convert: improper image header `/var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/ActiveStorage-1-20200805-10334-10n0rrc.png' @ error/png.c/ReadPNGImage/4287.
+convert: no images defined `/var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/image_processing20200805-10334-15i5y91.png' @ error/convert.c/ConvertImageCommand/3285.
+):
+  
+mini_magick (4.10.1) lib/mini_magick/shell.rb:17:in `run'
+mini_magick (4.10.1) lib/mini_magick/tool.rb:90:in `call'
+image_processing (1.11.0) lib/image_processing/mini_magick.rb:56:in `save_image'
+image_processing (1.11.0) lib/image_processing/processor.rb:23:in `call'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:50:in `call_processor'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:28:in `block in call'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:64:in `create_tempfile'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:27:in `call'
+image_processing (1.11.0) lib/image_processing/builder.rb:13:in `call!'
+image_processing (1.11.0) lib/image_processing/chainable.rb:65:in `call'
+activestorage (6.0.3.2) lib/active_storage/transformers/image_processing_transformer.rb:15:in `process'
+activestorage (6.0.3.2) lib/active_storage/transformers/transformer.rb:25:in `transform'
+activestorage (6.0.3.2) app/models/active_storage/variation.rb:52:in `block in transform'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:182:in `instrument'
+activestorage (6.0.3.2) app/models/active_storage/variation.rb:51:in `transform'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:105:in `transform'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:100:in `block in process'
+activestorage (6.0.3.2) lib/active_storage/downloader.rb:15:in `block in open'
+activestorage (6.0.3.2) lib/active_storage/downloader.rb:24:in `open_tempfile'
+activestorage (6.0.3.2) lib/active_storage/downloader.rb:12:in `open'
+activestorage (6.0.3.2) lib/active_storage/service.rb:86:in `open'
+activestorage (6.0.3.2) app/models/active_storage/blob.rb:219:in `open'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:99:in `process'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:67:in `processed'
+activestorage (6.0.3.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (6.0.3.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a]   [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a]   [1m[36mActiveStorage::Blob Update (1.2ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a]   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [af77b83b-386a-49cd-951e-036909509a0a] Performed ActiveStorage::AnalyzeJob (Job ID: af77b83b-386a-49cd-951e-036909509a0a) from Async(active_storage_analysis) in 2437.98ms
+Started POST "/rooms/4/messages" for ::1 at 2020-08-05 18:26:48 +0900
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"n1WgjztlrNSRV544GroFCO8ri1UHsP0CWdkd44OqG8bwFp9ABZ0NEZYxLsovLjHEU1ZjJCmM39yZgnUZytkJ0A==", "message"=>{"content"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9156d57868 @tempfile=#<Tempfile:/var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/RackMultipart20200805-10334-1aflzmt.jpg>, @original_filename="staff1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"message[image]\"; filename=\"staff1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"送信", "room_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` WHERE `rooms`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `room_id`, `user_id`, `created_at`, `updated_at`) VALUES ('', 4, 1, '2020-08-05 09:26:48.698711', '2020-08-05 09:26:48.698711')[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 9 AND `active_storage_attachments`.`record_type` = 'Message' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `byte_size`, `checksum`, `created_at`) VALUES ('wg3j2jqklqsclvtytbg1heh83epl', 'staff1.jpg', 'image/jpeg', '{\"identified\":true}', 194466, 'q5polh7bGd/3h56nO4QpnA==', '2020-08-05 09:26:48')[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'Message', 9, 2, '2020-08-05 09:26:48')[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[36mMessage Update (0.2ms)[0m  [1m[33mUPDATE `messages` SET `messages`.`updated_at` = '2020-08-05 09:26:48.705605' WHERE `messages`.`id` = 9[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+[36m  Disk Storage (1.4ms) [0m[32mUploaded file to key: wg3j2jqklqsclvtytbg1heh83epl (checksum: q5polh7bGd/3h56nO4QpnA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 89b6f22b-32f6-417d-9da0-d6d944c1ed39) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9156ef8b40 @uri=#<URI::GID gid://chat-app/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/rooms/4/messages
+Completed 302 Found in 20ms (ActiveRecord: 2.2ms | Allocations: 14713)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [89b6f22b-32f6-417d-9da0-d6d944c1ed39] Performing ActiveStorage::AnalyzeJob (Job ID: 89b6f22b-32f6-417d-9da0-d6d944c1ed39) from Async(active_storage_analysis) enqueued at 2020-08-05T09:26:48Z with arguments: #<GlobalID:0x00007f9156f33ba0 @uri=#<URI::GID gid://chat-app/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [89b6f22b-32f6-417d-9da0-d6d944c1ed39] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: wg3j2jqklqsclvtytbg1heh83epl[0m
+Started GET "/rooms/4/messages" for ::1 at 2020-08-05 18:26:48 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"room_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` WHERE `rooms`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT `rooms`.* FROM `rooms` INNER JOIN `room_users` ON `rooms`.`id` = `room_users`.`room_id` WHERE `room_users`.`user_id` = 1[0m
+  ↳ app/views/messages/_side_bar.html.erb:13
+  Rendered messages/_side_bar.html.erb (Duration: 1.7ms | Allocations: 1134)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`room_id` = 4[0m
+  ↳ app/views/messages/_main_chat.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/messages/_main_chat.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 8 AND `active_storage_attachments`.`record_type` = 'Message' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 9 AND `active_storage_attachments`.`record_type` = 'Message' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:17
+  Rendered collection of messages/_message.html.erb [2 times] (Duration: 6.9ms | Allocations: 4590)
+  Rendered messages/_main_chat.html.erb (Duration: 11.1ms | Allocations: 7022)
+  Rendered messages/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 8293)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 2.0ms | Allocations: 19649)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--09b996767ed5b8e45475f1b014dc707f656eab7f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--544042af76843b67cbc99fdb2b7af062bf3b0e75/apple-touch-icon-precomposed.png" for ::1 at 2020-08-05 18:26:48 +0900
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--014f902360bfebeda8176d3ce8804fbe446b5bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--544042af76843b67cbc99fdb2b7af062bf3b0e75/staff1.jpg" for ::1 at 2020-08-05 18:26:48 +0900
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--09b996767ed5b8e45475f1b014dc707f656eab7f", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--544042af76843b67cbc99fdb2b7af062bf3b0e75", "filename"=>"apple-touch-icon-precomposed"}
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--014f902360bfebeda8176d3ce8804fbe446b5bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTlRBd2VEVXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--544042af76843b67cbc99fdb2b7af062bf3b0e75", "filename"=>"staff1"}
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/euhb9zhmfdjyy5k0h7icfrw0w62h/632ac84651c144d24a1cd794b5077a0fe34259f1bc2131058e06685417e9540f (no)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: euhb9zhmfdjyy5k0h7icfrw0w62h[0m
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/wg3j2jqklqsclvtytbg1heh83epl/632ac84651c144d24a1cd794b5077a0fe34259f1bc2131058e06685417e9540f (no)[0m
+[36m  Disk Storage (3.0ms) [0m[34mDownloaded file from key: wg3j2jqklqsclvtytbg1heh83epl[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.1ms | Allocations: 6225)
+
+
+  
+MiniMagick::Error (`magick convert /var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/ActiveStorage-1-20200805-10334-6qzgvj.png[0] -auto-orient -resize 500x500 /var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/image_processing20200805-10334-hzmih7.png` failed with error:
+convert: improper image header `/var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/ActiveStorage-1-20200805-10334-6qzgvj.png' @ error/png.c/ReadPNGImage/4287.
+convert: no images defined `/var/folders/1q/c7lbvyp93s571tnx6zqkqbfw0000gn/T/image_processing20200805-10334-hzmih7.png' @ error/convert.c/ConvertImageCommand/3285.
+):
+  
+mini_magick (4.10.1) lib/mini_magick/shell.rb:17:in `run'
+mini_magick (4.10.1) lib/mini_magick/tool.rb:90:in `call'
+image_processing (1.11.0) lib/image_processing/mini_magick.rb:56:in `save_image'
+image_processing (1.11.0) lib/image_processing/processor.rb:23:in `call'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:50:in `call_processor'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:28:in `block in call'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:64:in `create_tempfile'
+image_processing (1.11.0) lib/image_processing/pipeline.rb:27:in `call'
+image_processing (1.11.0) lib/image_processing/builder.rb:13:in `call!'
+image_processing (1.11.0) lib/image_processing/chainable.rb:65:in `call'
+activestorage (6.0.3.2) lib/active_storage/transformers/image_processing_transformer.rb:15:in `process'
+activestorage (6.0.3.2) lib/active_storage/transformers/transformer.rb:25:in `transform'
+activestorage (6.0.3.2) app/models/active_storage/variation.rb:52:in `block in transform'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:182:in `instrument'
+activestorage (6.0.3.2) app/models/active_storage/variation.rb:51:in `transform'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:105:in `transform'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:100:in `block in process'
+activestorage (6.0.3.2) lib/active_storage/downloader.rb:15:in `block in open'
+activestorage (6.0.3.2) lib/active_storage/downloader.rb:24:in `open_tempfile'
+activestorage (6.0.3.2) lib/active_storage/downloader.rb:12:in `open'
+activestorage (6.0.3.2) lib/active_storage/service.rb:86:in `open'
+activestorage (6.0.3.2) app/models/active_storage/blob.rb:219:in `open'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:99:in `process'
+activestorage (6.0.3.2) app/models/active_storage/variant.rb:67:in `processed'
+activestorage (6.0.3.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (6.0.3.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[36m  Disk Storage (2.8ms) [0m[32mUploaded file to key: variants/wg3j2jqklqsclvtytbg1heh83epl/632ac84651c144d24a1cd794b5077a0fe34259f1bc2131058e06685417e9540f[0m
+[36m  Disk Storage (2.7ms) [0m[34mGenerated URL for file at key: variants/wg3j2jqklqsclvtytbg1heh83epl/632ac84651c144d24a1cd794b5077a0fe34259f1bc2131058e06685417e9540f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZkMmN6YWpKcWNXdHNjWE5qYkhaMGVYUmlaekZvWldnNE0yVndiQzgyTXpKaFl6ZzBOalV4WXpFME5HUXlOR0V4WTJRM09UUmlOVEEzTjJFd1ptVXpOREkxT1dZeFltTXlNVE14TURVNFpUQTJOamcxTkRFM1pUazFOREJtQmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NJL2FXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaWMzUmhabVl4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jM1JoWm1ZeExtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIwLTA4LTA1VDA5OjMxOjQ5LjA4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bc57c2f92d19b6478f30bffe97981dd0eaa1d7a7/staff1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22staff1.jpg%22%3B+filename%2A%3DUTF-8%27%27staff1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZkMmN6YWpKcWNXdHNjWE5qYkhaMGVYUmlaekZvWldnNE0yVndiQzgyTXpKaFl6ZzBOalV4WXpFME5HUXlOR0V4WTJRM09UUmlOVEEzTjJFd1ptVXpOREkxT1dZeFltTXlNVE14TURVNFpUQTJOamcxTkRFM1pUazFOREJtQmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NJL2FXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaWMzUmhabVl4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jM1JoWm1ZeExtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIwLTA4LTA1VDA5OjMxOjQ5LjA4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bc57c2f92d19b6478f30bffe97981dd0eaa1d7a7/staff1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22staff1.jpg%22%3B+filename%2A%3DUTF-8%27%27staff1.jpg
+Completed 302 Found in 320ms (ActiveRecord: 0.4ms | Allocations: 279945)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [89b6f22b-32f6-417d-9da0-d6d944c1ed39]   [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZkMmN6YWpKcWNXdHNjWE5qYkhaMGVYUmlaekZvWldnNE0yVndiQzgyTXpKaFl6ZzBOalV4WXpFME5HUXlOR0V4WTJRM09UUmlOVEEzTjJFd1ptVXpOREkxT1dZeFltTXlNVE14TURVNFpUQTJOamcxTkRFM1pUazFOREJtQmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NJL2FXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaWMzUmhabVl4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jM1JoWm1ZeExtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIwLTA4LTA1VDA5OjMxOjQ5LjA4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bc57c2f92d19b6478f30bffe97981dd0eaa1d7a7/staff1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22staff1.jpg%22%3B+filename%2A%3DUTF-8%27%27staff1.jpg" for ::1 at 2020-08-05 18:26:49 +0900
+[ActiveJob] [ActiveStorage::AnalyzeJob] [89b6f22b-32f6-417d-9da0-d6d944c1ed39]   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"width\":427,\"height\":640,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [89b6f22b-32f6-417d-9da0-d6d944c1ed39]   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [89b6f22b-32f6-417d-9da0-d6d944c1ed39] Performed ActiveStorage::AnalyzeJob (Job ID: 89b6f22b-32f6-417d-9da0-d6d944c1ed39) from Async(active_storage_analysis) in 390.33ms
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"staff1.jpg\"; filename*=UTF-8''staff1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZkMmN6YWpKcWNXdHNjWE5qYkhaMGVYUmlaekZvWldnNE0yVndiQzgyTXpKaFl6ZzBOalV4WXpFME5HUXlOR0V4WTJRM09UUmlOVEEzTjJFd1ptVXpOREkxT1dZeFltTXlNVE14TURVNFpUQTJOamcxTkRFM1pUazFOREJtQmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NJL2FXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaWMzUmhabVl4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jM1JoWm1ZeExtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIwLTA4LTA1VDA5OjMxOjQ5LjA4NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bc57c2f92d19b6478f30bffe97981dd0eaa1d7a7", "filename"=>"staff1"}
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms | Allocations: 2782)
+
+
